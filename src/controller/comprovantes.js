@@ -2,6 +2,7 @@ const { contas, depositos, saques, transferencias } = require('../bancodedados')
 
 const saldoConta = async (req, res) => {
     let { numero_conta, senha_conta } = req.query;
+    numero_conta = Number(numero_conta);
 
     if(!senha_conta || !numero_conta){
         return await res.status(404).json({ message: "O número da conta e senha não foram informados!"});
@@ -61,8 +62,6 @@ const extratoConta = async (req, res) => {
     const transferenciaEnviada = transferencias.filter(transferencia => {
         return Number(transferencia.numero_conta_origem) === numero_conta;
     });
-
-    console.log(transferenciaEnviada);
 
     const transferenciaRecebida = transferencias.filter(transferencia => {
         return Number(transferencia.numero_conta_destino) === numero_conta;

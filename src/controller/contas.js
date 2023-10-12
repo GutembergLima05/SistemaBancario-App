@@ -47,7 +47,7 @@ const criarConta = async (req, res) => {
 
     contas.push(conta);
 
-    return await res.status(201).json();
+    return await res.status(201).json({message: "Conta criada com sucesso!"});
 }
 
 const atualizarConta = async (req, res) => {
@@ -88,7 +88,7 @@ const atualizarConta = async (req, res) => {
     conta.usuario.senha = senha
     conta.usuario.telefone = telefone
 
-    return await res.status(203).json();
+    return await res.status(203).json({message: "Conta atualizada com sucesso!"});
 }
 
 const deletarConta = async (req, res) => {
@@ -110,7 +110,7 @@ const deletarConta = async (req, res) => {
         return conta.numero !== Number(id);
     });
 
-    return res.status(204).json();
+    return res.status(204).json({ message: "Conta deletada com sucesso!" });
 }
 
 module.exports = {
