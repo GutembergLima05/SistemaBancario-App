@@ -1,10 +1,35 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Index from './App.jsx' 
-import './index.css'
+import {RouterProvider,createBrowserRouter} from 'react-router-dom'
+import './style-index.css'
+
+
+import Cadastro from './authentication/cadastro.jsx'
+import Login from './authentication/login.jsx'
+import Senha from './authentication/senha.jsx'
+import Index from '.'
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Index/>
+  },
+  {
+    path: "/cadastro",
+    element: <Cadastro />,
+  },
+  {
+    path: "/login",
+    element: <Login />
+  },
+  {
+    path: "/senha",
+    element: <Senha/>
+  }
+])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Index />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )

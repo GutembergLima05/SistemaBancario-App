@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(13, 13, 14);
+    color: aliceblue;
+  }
+
+  a {
+    color: aaceblue;
+  }
+
+  h1 {
+    font-size: 50px;
+    margin-bottom: 0%;
+  }
+
+  .header {
+    color: aliceblue;
+    background-color: rgb(13, 13, 14);
+    display: flex;
+    flex-direction: row;
+    gap: 20%;
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    border-bottom: thin solid rgb(107, 107, 107);
+  }
+nav a{
+    margin-left: 30px;
+}
+.div-botao a{
+    margin-left: 30px;
+}
+  a {
+    color: aliceblue;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #b99e23;
+  }
+  .botao2{
+    color: #ffffff;
+border: 1px solid #b99e23 ;
+border-radius: 6px;
+background-color: #b99e23;
+padding: 9px;
+  }
+
+ .capa{
+    color: aliceblue;
+    background-image: url(/formulario/image/wallpaper2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: center;
+    padding: 15%;
+ }
