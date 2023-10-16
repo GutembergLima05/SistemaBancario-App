@@ -9,7 +9,7 @@ export default function Index() {
           <img src="./assets/fundo2.png" alt="" width="50px"></img>
         </div>
         <nav class="nav1">
-          <a href="">Home</a>
+          <a href="">Homee</a>
           <a href="">teste</a>
           <a href="">teste</a>
           <a href="">teste</a>
