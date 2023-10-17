@@ -1,8 +1,24 @@
 ## 💡 Ideia do Projeto - Sistema Bancário :
 Este projeto foi dedicado para a construção de um Sistema Bancário, cujo será utilizado com todas as funcionalidades que um banco possui, sendo: Listar Contas, Criar Conta, Atualizar Conta, Deletar Conta, Depositar, Sacar, Transferir, Saldo da Conta, Extrato da Conta.
 
- ### 💻 Resultado: (EM CONSTRUÇÃO)
+ ### 💻 Como utilizar o Projeto: 
 
+
+1. Realize o clone do projeto utilizando a ferramenta Git.
+2. Abra o projeto na sua IDE (Recomendado Visual Studio Code).
+3. Realize as instalações das depêndencias do projeto.
+   
+ 3.1. Entre no terminal da IDE, após acesse a pasta Back e rode o seguinte comando: `npm install`
+ 
+ 3.2. Entre no terminal da IDE, após acesse a pasta Front/SistemaBancarioApp e rode o seguinte comando: `npm install`
+   
+4. Após as dependências instaladas rode o projeto.
+
+ 4.1. Entre no terminal da IDE, após acesse a pasta Back e rode o seguinte comando: `npm run dev`
+ 
+ 4.2. Entre no terminal da IDE, após acesse a pasta Front/SistemaBancarioApp e rode o seguinte comando: `npm run dev`
+
+ 5. Projeto rodando!, apenas aproveite o projeto no link `http://localhost:5173/`
 
 
 
