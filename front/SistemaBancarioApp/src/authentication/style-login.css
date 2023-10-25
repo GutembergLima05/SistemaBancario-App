@@ -3,7 +3,7 @@
 
 body{
  background-color: #0f0f0f;
- background-image: url(image/wallpaper2.png);
+
   background-repeat: no-repeat;
   background-size: 100%;
   color: #ffffff;
@@ -14,17 +14,12 @@ h1 {
   font-size: 3.2em;
   line-height: 1;
 }
-.moldura{
-  background-color: rgba(238, 237, 237, 0);
-  border: 1px solid rgba(100, 76, 11, 0.705);
-
-  box-shadow: 0px 0px 12px 1px rgba(104, 72, 2, 0.897);
-  border-radius: 50px;
-
+.moldura{ 
   display: flex;
   flex-direction: row;
-  width: 72em;
-  height: 33em;
+  width: 65em;
+  height: 27em;
+  
   
   position: absolute;
     top: 50%;
@@ -33,44 +28,67 @@ h1 {
   
 }
 .esquerda{
+ 
   width: 55%;
   color: aliceblue;
-  background-color: #6787df;
-  background-image: url(image/fundo2.png);
-  border-radius: 50px 0px 0px 50px;
  padding: 5%;
- padding-top: 9%;
- text-align: center;
+
+ justify-content: center;
   
+}
+.esquerda .logo{
+  width: 200px;
+margin-top: -30px;
+margin-bottom: 20px;
   
 }
 .login{
+ background-color: #181818;
   width: 45%;
-  padding: 3%;
+  padding: 5%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   text-align: center;
+  justify-content: center;
 }
 
 input {
-  color: rgb(0, 0, 0);
-  border-radius: 20px;
-  border: 1px solid transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(165, 142, 12);
   padding: 0.8em 1.2em;
   font-size: 1em;
   font-weight: 500;
   background-color: #f7f7f7;
   cursor: pointer;
   transition: border-color 0.25s;
-  border-color: #0a0a0a;
+}
+.email{
+  background-image: url("https://i.imgur.com/eKw2dvH.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 1.3em;
+  background-position-x: 10px;
+  padding-left: 45px;
+
+}
+.senha{
+  background-image: url("https://img.icons8.com/ios-filled/50/000000/lock.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 1.3em;
+  background-position-x: 10px;
+  padding-left: 45px;
 }
 
 .button{
   font-size: 1.3em;
   color:#030303;
   background-color: #E6CA52;
+  background-image: none;
+  
 }
+
 .button:hover {
   border-color:#614b0e;
   background-color: #c9b148;
