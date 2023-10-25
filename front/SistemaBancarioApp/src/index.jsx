@@ -1,51 +1,91 @@
 import { Link } from "react-router-dom";
-import logo from './assets/logo.png'
-
+import logo from './assets/logo.png';
+import image from './assets/image.png'
+import image2 from './assets/image2.png'
 
 export default function Index() {
   return (
     <body>
-      <div class="header">
-        <div class="div-img">
-        <Link to={`/`}><img class='logo' src={logo} /></Link>
+      <header className='header'>
+        <div className="div-img">
+          <Link to={`/`}><img className='logo' src={logo} /></Link>
         </div>
-        <nav class="nav1">
-          <a href="">Homee</a>
-          <a href="">teste</a>
-          <a href="">teste</a>
-          <a href="">teste</a>
-          <a href="">teste</a>
+        <nav className="nav1">
+          <Link to={`/login`} > Entrar </Link>
+          <Link to={`/login`} > Entrar </Link>
+          <Link to={`/login`} > Entrar </Link>
+          <Link to={`/login`} > Entrar </Link>
+          <Link to={`/login`} > Entrar </Link>
         </nav>
-        <div class="div-botao">
-          <Link to={`/login`} class="botao1" >
+        <div className="div-botao">
+          <Link to={`/login`} className="botao1" >
             Entrar
           </Link>
-          <Link to={`/cadastro`} class="botao2">
+          <Link to={`/cadastro`} className="botao2">
             Cadastro
           </Link>
         </div>
-      </div>
-      <div class="capa">
-        <h1>testando testando</h1>
+      </header>
+      <div className="capa">
+        <h1>Projeto Sistema Bancário</h1>
         <p>
-          {" "}
-          ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
-          pppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+          Este projeto foi dedicado para a construção de um Sistema Bancário,
+          cujo será utilizado com todas as funcionalidades que um banco possui,
+          sendo: Listar Contas, Criar Conta, Atualizar Conta, Deletar Conta,
+          Depositar, Sacar, Transferir, Saldo da Conta, Extrato da Conta.
         </p>
       </div>
-      <h1>teste</h1>
-      <p>
-        Friends was a American comedy television show that ran from September
-        22, 1994 to May 6 ,2004.
-        <br></br>
-        It is about 6 friends who aved in Manhattan, New York City. They were in
-        their 20s and 30s.
-      </p>
-      <p>The names of the "friends" were:</p>
-
-      <a href="https://pt.wikipedia.org/wiki/Friends" target="_blank">
-        Friends
-      </a>
+      <div className="seção">
+        <div className="text">
+          <h1>teste</h1>
+          <p>
+            Friends was a American comedy television show that ran from September
+            22, 1994 to May 6 ,2004.
+            <br></br>
+            It is about 6 friends who aved in Manhattan, New York City. They were in
+            their 20s and 30s.
+          </p>
+          <p>The names of the "friends" were:</p>
+        </div>
+        <div>
+          <img src={image} alt="image" width='600px' />
+        </div>
+      </div>
+      <div className="seção2">
+        <div>
+          <img src={image2} alt="image2" width='550px' />
+        </div>
+        <div className="text">
+          <h1>teste</h1>
+          <p>
+            Friends was a American comedy television show that ran from September
+            22, 1994 to May 6 ,2004.
+            <br></br>
+            It is about 6 friends who aved in Manhattan, New York City. They were in
+            their 20s and 30s.
+          </p>
+          <p>The names of the "friends" were:</p>
+        </div>
+      </div>
+      <div className="seção">
+          
+      </div>
+      <div className="seção2">
+        <div>
+        </div>
+        <div className="text">
+          <h1>teste</h1>
+          <p>
+            Friends was a American comedy television show that ran from September
+            22, 1994 to May 6 ,2004.
+            <br></br>
+            It is about 6 friends who aved in Manhattan, New York City. They were in
+            their 20s and 30s.
+          </p>
+          <p>The names of the "friends" were:</p>
+        </div>
+        </div>
+      
     </body>
   );
 }
