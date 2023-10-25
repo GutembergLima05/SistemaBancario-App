@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from './assets/logo.png'
 
 
 export default function Index() {
@@ -6,7 +7,7 @@ export default function Index() {
     <body>
       <div class="header">
         <div class="div-img">
-          <img src="./assets/fundo2.png" alt="" width="50px"></img>
+        <Link to={`/`}><img class='logo' src={logo} /></Link>
         </div>
         <nav class="nav1">
           <a href="">Homee</a>

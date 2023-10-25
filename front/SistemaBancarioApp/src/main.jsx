@@ -8,6 +8,7 @@ import Cadastro from './authentication/cadastro.jsx'
 import Login from './authentication/login.jsx'
 import Senha from './authentication/senha.jsx'
 import Index from '.'
+import Menu from './bank/menu.jsx'
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "/senha",
     element: <Senha/>
+  },
+  {
+    path: "/menu",
+    element: <Menu/>
   }
 ])
 
