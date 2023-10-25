@@ -5,10 +5,10 @@ import logo from '../assets/logo.png'
 export default function Senha() {
   return (
     <body>
-    <section class='moldura'>
+    <section className='moldura'>
 
-        <div class='esquerda'>
-        <Link to={`/`}><img class='logo' src={logo} /></Link>
+        <div className='esquerda'>
+        <Link to={`/`}><img className='logo' src={logo} /></Link>
           <p>
             <h1>Recupere a senha</h1>
             <h2>Você receberá um email de confirmação.</h2>
@@ -16,9 +16,9 @@ export default function Senha() {
   
         </div>
   
-        <div class='login'>
-        <input class="email" type="email" placeholder="Digite seu email" />
-        <input  class="button" type="button" value="Recuperar senha" />
+        <div className='login'>
+        <input className="email" type="email" placeholder="Digite seu email" />
+        <input  className="button" type="button" value="Recuperar senha" />
         <br></br>
         <aside>
         <p>Não tem uma conta? <Link to={`/cadastro`}>Quero me cadastrar</Link>!</p>

@@ -10,22 +10,16 @@ body{
   font-family: 'Work Sans', sans-serif;
 
 }
-h1 {
-  font-size: 3.2em;
-  line-height: 1;
-}
 .moldura{ 
   display: flex;
   flex-direction: row;
   width: 65em;
   height: 27em;
   
-  
   position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  
 }
 .esquerda{
  
@@ -93,10 +87,13 @@ input {
   border-color:#614b0e;
   background-color: #c9b148;
 }
-a{
+aside a{
   color: #b99e23;
 }
 
+a:hover {
+  color: #fff6a7;
+}
 
 @media (max-width: 768px){
   .moldura{

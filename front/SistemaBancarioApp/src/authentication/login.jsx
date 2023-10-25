@@ -1,14 +1,13 @@
-import './style-login.css';
 import { Link } from "react-router-dom";
 import logo from '../assets/logo.png'
 
 export default function Login() {
   return (
     <body>
-      <section class='moldura'>
+      <section className='moldura'>
 
-        <div class='esquerda'>
-          <Link to={`/`}><img class='logo' src={logo} /></Link>
+        <div className='esquerda'>
+          <Link to={`/`}><img className='logo' src={logo} /></Link>
 
           <p>
             <h1>Faça seu Login</h1>
@@ -17,17 +16,18 @@ export default function Login() {
 
         </div>
 
-        <div class='login'>
-          <input class="email" type="email" placeholder="Digite seu email" />
-          <input class="senha" type="text" placeholder="Digite sua senha" />
-          <input class="button" type="button" value="Entrar" />
+        <div className='login'>
+          <input className="email" type="email" placeholder="Digite seu email" />
+          <input className="senha" type="text" placeholder="Digite sua senha" />
+          <input className="button" type="button" value="Entrar" />
+    
           <br></br>
           <aside>
             <Link to={`/senha`} >Esqueceu a senha?</Link>
             <p>Não tem uma conta? <Link to={`/cadastro`}>clique aqui</Link>!!</p>
           </aside>
         </div>
-
+      
       </section>
     </body>
   );
