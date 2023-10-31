@@ -1,4 +1,7 @@
 let { contas, identificadorConta } = require('../bancodedados');
+const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
+const senhaJwt = require('../senhaJwt')
 
 
 const listarContas = async (req, res) => {
@@ -32,6 +35,8 @@ const criarConta = async (req, res) => {
         return await res.status(401).json({ message: "Já existe uma conta com o cpf ou e-mail e informado!"})
     }
 
+    const senhaCrypt = await bcrypt.hash(senha, 10);
+
     const conta = {
         numero: identificadorConta++,
         saldo: 0,
@@ -41,7 +46,7 @@ const criarConta = async (req, res) => {
            data_nascimento,
            telefone,
            email,
-           senha
+           senha: senhaCrypt
         }
     }
 
@@ -113,6 +118,44 @@ const deletarConta = async (req, res) => {
     return res.status(204).json({ message: "Conta deletada com sucesso!" });
 }
 
+const loginUser = async (req, res) => {
+    const { email, senha } = req.body;
+
+    try {
+        
+        const conta = contas.find((validarContaEmail) => {
+            return  validarContaEmail.usuario.email === email;
+        });
+
+        if(!conta){
+            return await res.status(401).json({ message: "E-mail ou senha inválida!"})
+        }
+
+        const senhaValida = await bcrypt.compare(senha, conta.usuario.senha)
+
+        if(!senhaValida){
+            return await res.status(401).json({ message: "E-mail ou senha inválida!"})
+        }
+
+        const token = jwt.sign({
+            id: conta.numero,
+            nome: conta.usuario.nome
+        }, 
+            senhaJwt, {expiresIn: '1h'})
+
+            const { senha: _, ...usuarioLogado } = conta
+
+            return res.status(200).json({usuarioLogado, token})
+
+    } catch (error) {
+        return res.status(500).json({ message: 'Erro interno do servidor'});
+    }
+}
+
+const obterPerfil = async (req, res) => {
+    return res.json(req.usuario)
+}
+
 module.exports = {
-    listarContas, criarConta, atualizarConta, deletarConta
+    listarContas, criarConta, atualizarConta, deletarConta, loginUser, obterPerfil
 }
